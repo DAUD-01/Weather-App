@@ -48,4 +48,8 @@ body{
 #search-btn img{
     width: 16px;
 }
+#weather{
+    display: none;
+}
+
 

@@ -1,4 +1,4 @@
-const searchEl = document.getElementById("search");
+const searchEl = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 const weatherContainer = document.getElementById("weather");
 const tempText = document.getElementById("temp");
@@ -48,6 +48,20 @@ function getWeatherIcon(condition) {
     if (condition.includes('snow')) return 'images/snow.png';
     if (condition.includes('wind')) return 'images/wind.png';
     return 'images/default.png';
+}
+
+// update the data to the actual card elements
+function updateUI(data) {
+    const { main, name, weather, wind } = data;
+
+    tempText.innerText = `${Math.round(main.temp)}°C`;
+    cityText.innerText = name;
+    humidityText.innerText = `${main.humidity}%`;
+    windText.innerText = `${wind.speed} km/h`;
+    weatherIcon.src = getWeatherIcon(weather[0].main);
+
+    weatherContainer.style.display = 'block'; // show section
+    searchEl.value = ''; // clear input
 }
 
 
