@@ -26,9 +26,19 @@ A simple web app that fetches real-time weather data for any city using the Open
 * Get a free API key from [OpenWeather](https://openweathermap.org/api)
 * Replace the API key in your JavaScript file
 
+## 🌐 Live Demo
+
+[Check it out here](https://daud-01.github.io/Weather-App/)
+
 ## 🎮 How to Use
 
 * Enter a city name in the search bar
 * Click search
 * View weather details in the card
+
+## ⚠️ Note
+
+* Requires internet connection
+* Limited to data provided by OpenWeather API
+* Some images may not display at night. This issue will be fixed in a future update.
 
